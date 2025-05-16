@@ -9,6 +9,12 @@
 <button @click="count += 1">Add</button>
 <button @click="count -= 1">Sub</button>
 
+<!-- Counter App 2 -->
+<h2> {{count2}} </h2>
+<button @click="increment">Add</button>
+<button @click="decrement(2)">Sub</button>
+
+
 
 </template>
 
@@ -20,6 +26,7 @@ export default {
     return{
       name:'Fahimé',
       count: 0,
+      count2: 0,
 
       greeting:'Salut',
       question:'Comment vas-tu ?',
@@ -29,6 +36,14 @@ export default {
         color:'red',
         backgroundColor: 'green',
       }
+    }
+  },
+  methods:{
+    increment(){
+       this.count2 += 1
+    },
+    decrement(num){
+      this.count2 -= num
     }
   }
 }
