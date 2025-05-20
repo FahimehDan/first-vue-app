@@ -14,6 +14,23 @@
 <button @click="increment">Add</button>
 <button @click="decrement(2)">Sub</button>
 
+<!-- Conditional directives in Vue Js -->
+<h2 v-if="number===0" >This is a number </h2>
+<h2 v-else-if="number < 0" >Number is negative </h2>
+<h2 v-else-if="number > 0" >Number is positive </h2>
+<h2 v-else >Number is not a numner </h2>
+
+<h2 v-show="isVisible" >Data is visible </h2>
+<h2 v-if="isVisible" >Data is visible </h2>
+
+<template v-if="fruitIsVisible"> 
+<p>pomme</p>
+<p>pomme de terre</p>
+<p>mange</p>
+</template>
+
+
+
 
 
 </template>
@@ -27,6 +44,9 @@ export default {
       name:'Fahimé',
       count: 0,
       count2: 0,
+      number: 'hi',
+      isVisible: true,
+      fruitIsVisible: true,
 
       greeting:'Salut',
       question:'Comment vas-tu ?',
