@@ -1,4 +1,7 @@
 <template>
+
+<GreetVue/>
+
 <p>{{greeting}} {{name}}</p>
 <p v-text="question"> </p>
 <p v-html="htmlData" :id="id" :class="id" :style="style"></p>
@@ -37,8 +40,15 @@
 
 <script>
 
+import GreetVue from './components/Greet.vue'
+
 export default {
   name: 'App',
+
+  components: {
+    GreetVue
+  },
+
   data(){
     return{
       name:'Fahimé',
