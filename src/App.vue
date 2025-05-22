@@ -2,6 +2,8 @@
 
 <GreetVue name="Fafa"/>
 <GreetVue name="Neguin"/>
+<GreetVue :name="propesName"/>
+
 
 
 <p>{{greeting}} {{name}}</p>
@@ -59,6 +61,7 @@ export default {
       number: 'hi',
       isVisible: true,
       fruitIsVisible: true,
+      propesName: 'superman',
 
       greeting:'Salut',
       question:'Comment vas-tu ?',
