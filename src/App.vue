@@ -1,6 +1,8 @@
 <template>
 
-<GreetVue/>
+<GreetVue name="Fafa"/>
+<GreetVue name="Neguin"/>
+
 
 <p>{{greeting}} {{name}}</p>
 <p v-text="question"> </p>
