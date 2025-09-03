@@ -13,6 +13,27 @@
 
 <!-- Emitter example until here-->
 
+<!-- Slot example-->
+
+<div>
+  <CardVue>This is our first Slot</CardVue>
+  <CardVue><h1>This is our first Slot</h1></CardVue>
+  <CardVue><img src="" alt="here is an image"/></CardVue>
+
+  <CardVue>
+    <template v-slot:header>
+      <h2> This is card heading</h2>
+    </template>
+    <template v-slot:default>
+      <img src=""/>
+    </template>
+    <template v-slot:footer>
+      <b> This is card footer</b>
+    </template>
+  </CardVue> 
+</div>
+
+<!-- End of Slot-->
 
 
 <p>{{greeting}} {{name}}</p>
@@ -55,13 +76,15 @@
 
 import GreetVue from './components/Greet.vue'
 import PopupVue from './components/Popup.vue'
+import CardVue from './components/Card.vue'
 
 export default {
   name: 'App',
 
   components: {
     GreetVue,
-    PopupVue
+    PopupVue,
+    CardVue
   },
 
   data(){
