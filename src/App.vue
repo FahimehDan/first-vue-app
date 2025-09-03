@@ -7,7 +7,7 @@
 <!-- Emitter example -->
 <button @click="isPopupVisible = true"> Show Popup </button>
 
-<PopupVue v-if="isPopupVisible"/>
+<PopupVue v-if="isPopupVisible" @close="isPopupVisible=false"/>
 
 
 

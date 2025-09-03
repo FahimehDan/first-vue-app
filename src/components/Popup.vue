@@ -1,10 +1,11 @@
 <template>
     <h3>This is Popup</h3>
-    <button>Close</button>
+    <button @click="$emit('close')">Close</button>
 </template>
 
 <script>
 export default {
     name: 'Popup',
+    emits: ['close']
 }
 </script>
