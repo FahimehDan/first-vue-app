@@ -4,6 +4,15 @@
 <GreetVue name="Neguin"/>
 <GreetVue :name="propesName"/>
 
+<!-- Emitter example -->
+<button @click="isPopupVisible = true"> Show Popup </button>
+
+<PopupVue v-if="isPopupVisible"/>
+
+
+
+<!-- Emitter example until here-->
+
 
 
 <p>{{greeting}} {{name}}</p>
@@ -45,12 +54,14 @@
 <script>
 
 import GreetVue from './components/Greet.vue'
+import PopupVue from './components/Popup.vue'
 
 export default {
   name: 'App',
 
   components: {
-    GreetVue
+    GreetVue,
+    PopupVue
   },
 
   data(){
@@ -62,6 +73,7 @@ export default {
       isVisible: true,
       fruitIsVisible: true,
       propesName: 'superman',
+      isPopupVisible: false,
 
       greeting:'Salut',
       question:'Comment vas-tu ?',
