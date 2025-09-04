@@ -1,4 +1,13 @@
 <template>
+<!-- Counter App for state management -->
+
+<CountVue :countLast="countLast"/>
+<br/>
+<ButtonVue name="Add" @changeCount="countLast += 1"/>
+<ButtonVue name="Sub" @changeCount="countLast -= 1"/>
+
+<!-- End of Counter App for state management -->
+
 
 <GreetVue name="Fafa"/>
 <GreetVue name="Neguin"/>
@@ -68,8 +77,6 @@
 
 
 
-
-
 </template>
 
 <script>
@@ -77,6 +84,8 @@
 import GreetVue from './components/Greet.vue'
 import PopupVue from './components/Popup.vue'
 import CardVue from './components/Card.vue'
+import CountVue from './components/Count.vue'
+import ButtonVue from './components/Button.vue'
 
 export default {
   name: 'App',
@@ -84,11 +93,16 @@ export default {
   components: {
     GreetVue,
     PopupVue,
-    CardVue
+    CardVue,
+    CountVue,
+    ButtonVue
   },
 
   data(){
     return{
+      countLast: 0,
+
+
       name:'Fahimé',
       count: 0,
       count2: 0,
